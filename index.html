@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio & Project Showcase Notebook</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            },
+            darkbg: '#0B0F17',
+            darkcard: '#161F30',
+            darkborder: '#233044'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    .glass-card { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-darkbg text-slate-800 dark:text-slate-100 font-sans min-h-screen transition-colors duration-300 flex flex-col justify-between">
+
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-darkborder bg-white/80 dark:bg-darkbg/80 glass-card">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20">
+          <i data-lucide="cpu" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900 dark:text-white tracking-tight text-lg">DevNotebook</span>
+          <span class="text-xs text-brand-600 dark:text-brand-500 font-mono block -mt-1">AI & DevOps Showcase</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="#projects" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Projects</a>
+        <a href="#credentials" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Credentials & Badges</a>
+        <a href="#notebook" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">System Notes</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+          <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="https://github.com" target="_blank" class="flex items-center space-x-2 text-xs font-semibold px-3 py-2 rounded-lg bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-white transition-all shadow-sm">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">GitHub Profile</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative py-8 md:py-12 border-b border-slate-200 dark:border-darkborder">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-700/50 text-brand-600 dark:text-brand-400 text-xs font-mono font-medium mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Architecting AI & Automated Systems</span>
+        </div>
+        
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight mb-4">
+          Personal Showcase & System Architecture
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+          A focused digital notebook documenting <strong class="text-slate-900 dark:text-slate-200 font-semibold">what</strong> was built and <strong class="text-slate-900 dark:text-slate-200 font-semibold">why</strong> it creates value. Highlighting business impact, automation workflows, and continuous learning achievements.
+        </p>
+
+        <!-- Dynamic Quick Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-200 dark:border-darkborder/60">
+          <div>
+            <div class="text-2xl font-bold text-brand-600 dark:text-brand-500 font-mono">30+</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Verified Badges</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-amber-500 font-mono">3</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Learning Trophies</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-brand-600 dark:text-brand-500 font-mono">5+</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Certifications</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-emerald-500 font-mono">100%</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Outcome-Driven</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POWERSHELL & CORE AUTOMATION FOUNDATION -->
+    <section id="powershell" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="terminal" class="w-6 h-6 text-brand-600 dark:text-brand-500"></i>
+            PowerShell & Enterprise Automation Foundation
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Where it all began: Infrastructure automation, script optimization, enterprise AD/Azure management, and OS orchestration.
+          </p>
+        </div>
+        <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 font-semibold border border-brand-500/20">
+          Career Origin & Core Competency
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-5 space-y-3 shadow-sm">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="shield" class="w-4 h-4 text-brand-500"></i> Active Directory & Azure AD
+            </h3>
+            <span class="text-[10px] font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-500">PS 7+ / Az Module</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            Built modular scripts for bulk user provisioning, automated RBAC entitlement audits, and automated zero-trust credential rotation pipelines across hybrid cloud environments.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-5 space-y-3 shadow-sm">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="cpu" class="w-4 h-4 text-emerald-500"></i> OS & System Triage
+            </h3>
+            <span class="text-[10px] font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-500">WMI / CIm</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            Automated system diagnostics, remote execution jobs, software deployment packages, and continuous compliance reporting via asynchronous PowerShell jobs and Runspaces.
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-5 space-y-3 shadow-sm">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="workflow" class="w-4 h-4 text-amber-500"></i> REST API & Orchestration
+            </h3>
+            <span class="text-[10px] font-mono bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-500">Invoke-RestMethod</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            Bridged legacy IT systems with modern REST APIs, creating custom PowerShell wrappers that feed operational data into CI/CD pipelines, n8n workflows, and monitoring dashboards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-brand-600 dark:text-brand-500"></i>
+            Personal Projects & Systems
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">High-level architectural summaries prioritizing business value over tutorials.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="projectsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- CREDENTIALS, BADGES & TROPHIES BOARD -->
+    <section id="credentials" class="space-y-6 pt-6 border-t border-slate-200 dark:border-darkborder">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="award" class="w-6 h-6 text-brand-600 dark:text-brand-500"></i>
+            Credentials & Achievements Showcase
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Displaying verified certifications, Microsoft trophies, and specialized learning badges.
+          </p>
+        </div>
+
+        <!-- Microsoft Profile Transcript Link Button -->
+        <a href="https://learn.microsoft.com" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-semibold transition-all shrink-0">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          Verify Full Microsoft Transcript
+        </a>
+      </div>
+
+      <!-- Overview Highlight Cards (Certificates + Trophies Summary) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="trophiesContainer">
+        <!-- Trophies and Major Certs Rendered dynamically -->
+      </div>
+
+      <!-- Tab Filter Controls for Badges -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-slate-200 dark:border-darkborder/60">
+        <div class="flex flex-wrap gap-2" id="badgeFilters">
+          <button onclick="filterBadges('all')" class="badge-filter-btn active text-xs px-3 py-1.5 rounded-md font-medium border bg-brand-600 text-white border-brand-600">All (30+)</button>
+          <button onclick="filterBadges('microsoft')" class="badge-filter-btn text-xs px-3 py-1.5 rounded-md font-medium border border-slate-300 dark:border-darkborder text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Microsoft</button>
+          <button onclick="filterBadges('ai')" class="badge-filter-btn text-xs px-3 py-1.5 rounded-md font-medium border border-slate-300 dark:border-darkborder text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">AI & Automation</button>
+          <button onclick="filterBadges('devops')" class="badge-filter-btn text-xs px-3 py-1.5 rounded-md font-medium border border-slate-300 dark:border-darkborder text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">DevOps & Cloud</button>
+        </div>
+
+        <!-- Search Input for Badges -->
+        <div class="relative w-full sm:w-64">
+          <i data-lucide="search" class="w-3.5 h-3.5 absolute left-3 top-2.5 text-slate-400"></i>
+          <input type="text" id="badgeSearchInput" onkeyup="searchBadges()" placeholder="Search badges..." class="w-full pl-8 pr-3 py-1.5 bg-white dark:bg-darkcard border border-slate-300 dark:border-darkborder rounded-md text-xs focus:outline-none focus:ring-1 focus:ring-brand-500">
+        </div>
+      </div>
+
+      <!-- Badges Grid (Compact Visual Matrix) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3" id="badgesGrid">
+        <!-- Badges rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- SYSTEM NOTEBOOK SECTION -->
+    <section id="notebook" class="space-y-6 pt-6 border-t border-slate-200 dark:border-darkborder">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="book-open" class="w-6 h-6 text-brand-600 dark:text-brand-500"></i>
+          System Notebook & Insights
+        </h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">High-level technical notes on automation engineering and cloud deployment strategies.</p>
+      </div>
+
+      <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-6 shadow-sm space-y-4">
+        <div class="divide-y divide-slate-200 dark:divide-darkborder/60" id="notesList">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-darkborder bg-white dark:bg-darkbg py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="terminal" class="w-4 h-4 text-brand-600"></i>
+        <span>Hosted on GitHub Pages • Digital Portfolio Architecture</span>
+      </div>
+      <div>
+        <span>Focused on Outcomes, Business Value, & Production Systems</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 dark:bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl space-y-6 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-500 dark:text-slate-400">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function initTheme() {
+      if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.classList.remove('dark');
+        updateThemeIcon(false);
+      } else {
+        document.documentElement.classList.add('dark');
+        updateThemeIcon(true);
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+      updateThemeIcon(isDark);
+    }
+
+    function updateThemeIcon(isDark) {
+      const iconContainer = document.getElementById('themeIcon');
+      if (iconContainer) {
+        iconContainer.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+        lucide.createIcons();
+      }
+    }
+
+    // PROJECTS DATA
+    const projectsData = [
+      {
+        id: 'crm-sync',
+        title: 'Autonomous Lead Qualification & CRM Sync',
+        tagline: 'Instant sales lead triage and automated qualification.',
+        category: 'AI Automation',
+        icon: 'bot',
+        what: 'An automated pipeline that captures incoming webhooks, routes inquiries through an LLM to evaluate intent, assigns priority scores, enriches lead metadata, and auto-generates personalized replies directly into the sales CRM.',
+        why: 'Eliminates 15+ hours per week of manual sales triage, reduces response time from hours to under 2 minutes, and guarantees high-intent leads are immediately flagged.',
+        impact: ['98% Reduction in lead response time', 'Zero manual data entry for sales reps', 'Instant priority escalation via Slack'],
+        demoUrl: 'https://github.com'
+      },
+      {
+        id: 'content-engine',
+        title: 'Multi-Channel Content Engine',
+        tagline: 'Automated content leverage from existing media.',
+        category: 'AI Pipeline',
+        icon: 'share-2',
+        what: 'An integrated system that ingests long-form video transcripts or articles, extracts core insights using tailored LLM context windows, and outputs multi-format drafts for LinkedIn, Twitter, and executive summaries.',
+        why: 'Maximizes digital organic reach without increasing editorial headcounts. Turns a single long-form piece of intellectual property into dozens of tailored platform assets automatically.',
+        impact: ['4x Increase in published organic touchpoints', '100% Consistency in brand output style', 'Eliminates post-production formatting bottlenecks'],
+        demoUrl: 'https://github.com'
+      },
+      {
+        id: 'k8s-agent',
+        title: 'Zero-Downtime Containerized AI Service',
+        tagline: 'Production-ready self-healing AI microservices.',
+        category: 'DevOps / K8s',
+        icon: 'server',
+        what: 'A containerized AI orchestration runner deployed inside lightweight Alpine containers, managed via Kubernetes auto-scaling rules and protected by continuous health checks.',
+        why: 'Guarantees enterprise uptime and fault tolerance. If an AI node exhausts its memory or crashes under heavy request volume, Kubernetes automatically provisions a replacement node with zero service disruption.',
+        impact: ['99.99% High-availability runtime environment', 'Automated GitHub Actions CI/CD pipeline', 'Zero downtime during code updates'],
+        demoUrl: 'https://github.com'
+      }
+    ];
+
+    // TROPHIES & MAJOR CERTIFICATES HIGHLIGHT DATA
+    const trophiesData = [
+      {
+        title: 'Microsoft Learn Master Trophy',
+        subtitle: '3 Learning Path Trophies Earned',
+        type: 'Trophy',
+        icon: 'trophy',
+        color: 'text-amber-500 bg-amber-500/10 border-amber-500/30',
+        desc: 'Achieved complete mastery across Azure Fundamentals, AI Foundations, and Data Security paths.'
+      },
+      {
+        title: 'Microsoft Certified: Azure Fundamentals',
+        subtitle: 'Official Certification',
+        type: 'Certification',
+        icon: 'award',
+        color: 'text-blue-500 bg-blue-500/10 border-blue-500/30',
+        desc: 'Verified competency in cloud concepts, security, architecture, and governance.'
+      },
+      {
+        title: 'n8n Certified Automation Specialist',
+        subtitle: 'Official Certification',
+        type: 'Certification',
+        icon: 'workflow',
+        color: 'text-rose-500 bg-rose-500/10 border-rose-500/30',
+        desc: 'Demonstrated expert proficiency in webhook orchestration, custom node handling, and API integration.'
+      }
+    ];
+
+    // 30 BADGES DATA (Generates compact matrix view)
+    const badgeCategories = ['microsoft', 'ai', 'devops'];
+    const badgeIcons = ['shield-check', 'sparkles', 'terminal', 'cloud', 'cpu', 'database', 'code', 'layers', 'git-branch', 'activity'];
+    
+    // Generate sample list representing the 30 badges
+    const badgesData = Array.from({ length: 30 }, (_, index) => {
+      const idNum = index + 1;
+      let category = badgeCategories[index % badgeCategories.length];
+      let issuer = category === 'microsoft' ? 'Microsoft Learn' : (category === 'ai' ? 'Google / n8n' : 'Linux Foundation / GitHub');
+      
+      return {
+        id: `badge-${idNum}`,
+        title: `${category.toUpperCase()} Module Badge #${idNum}`,
+        issuer: issuer,
+        category: category,
+        icon: badgeIcons[index % badgeIcons.length],
+        date: 'Verified'
+      };
+    });
+
+    // NOTEBOOK NOTES
+    const notesData = [
+      {
+        title: 'PowerShell Mastery: Shifting from Scripting to Production Tooling',
+        tag: 'PowerShell / Automation',
+        snippet: 'Structuring PowerShell scripts into reusable modules with strict error handling (`-ErrorAction Stop`) and Pester unit testing turns quick scripts into reliable enterprise infrastructure tooling.'
+      },
+      {
+        title: 'Architecture Strategy: Why Isolation Matters for AI Runners',
+        tag: 'Infrastructure',
+        snippet: 'Decoupling prompt generation from workflow triggers using event queues ensures high traffic volume never causes webhook timeouts.'
+      },
+      {
+        title: 'Designing Deterministic Prompts for Enterprise Software',
+        tag: 'AI Engineering',
+        snippet: 'Using JSON schemas with strict field enums prevents LLM schema drift and eliminates data parsing errors in automated pipelines.'
+      }
+    ];
+
+    // RENDER FUNCTIONS
+    function renderProjects() {
+      const grid = document.getElementById('projectsGrid');
+      grid.innerHTML = projectsData.map(p => `
+        <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-6 shadow-sm flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium">
+                ${p.category}
+              </span>
+              <div class="w-8 h-8 rounded-lg bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+                <i data-lucide="${p.icon}" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
+                ${p.title}
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">${p.tagline}</p>
+            </div>
+
+            <div class="space-y-3 pt-2 text-xs">
+              <div class="bg-slate-50 dark:bg-darkbg/50 p-3 rounded-lg border border-slate-100 dark:border-darkborder">
+                <span class="font-semibold text-brand-600 dark:text-brand-400 block mb-1">WHAT IT IS:</span>
+                <p class="text-slate-600 dark:text-slate-300 line-clamp-2">${p.what}</p>
+              </div>
+
+              <div class="bg-slate-50 dark:bg-darkbg/50 p-3 rounded-lg border border-slate-100 dark:border-darkborder">
+                <span class="font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">WHY IT MATTERS:</span>
+                <p class="text-slate-600 dark:text-slate-300 line-clamp-2">${p.why}</p>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openModal('${p.id}')" class="mt-6 w-full py-2 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white text-slate-700 dark:text-slate-300 text-xs font-semibold transition-all flex items-center justify-center gap-2">
+            <span>Inspect System Architecture</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function renderTrophies() {
+      const container = document.getElementById('trophiesContainer');
+      container.innerHTML = trophiesData.map(t => `
+        <div class="bg-white dark:bg-darkcard border ${t.color.split(' ')[2]} rounded-xl p-4 shadow-sm flex items-start space-x-3">
+          <div class="p-3 rounded-xl ${t.color.split(' ')[0]} ${t.color.split(' ')[1]} shrink-0">
+            <i data-lucide="${t.icon}" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="text-[10px] font-mono uppercase font-bold text-slate-400 tracking-wider">${t.type}</span>
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">${t.title}</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">${t.desc}</p>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    let activeCategory = 'all';
+
+    function renderBadges(filterCategory = 'all', searchQuery = '') {
+      const grid = document.getElementById('badgesGrid');
+      
+      let filtered = badgesData;
+      if (filterCategory !== 'all') {
+        filtered = filtered.filter(b => b.category === filterCategory);
+      }
+      if (searchQuery.trim() !== '') {
+        filtered = filtered.filter(b => b.title.toLowerCase().includes(searchQuery.toLowerCase()) || b.issuer.toLowerCase().includes(searchQuery.toLowerCase()));
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full py-8 text-center text-xs text-slate-400">No matching badges found.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(b => `
+        <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-lg p-3 flex items-center space-x-2.5 hover:border-brand-500/50 transition-all group">
+          <div class="p-2 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 group-hover:text-brand-500 shrink-0">
+            <i data-lucide="${b.icon}" class="w-4 h-4"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h4 class="text-[11px] font-bold text-slate-900 dark:text-white truncate">${b.title}</h4>
+            <span class="text-[10px] text-slate-400 block truncate">${b.issuer}</span>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function filterBadges(category) {
+      activeCategory = category;
+      document.querySelectorAll('.badge-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white', 'border-brand-600');
+        btn.classList.add('border-slate-300', 'dark:border-darkborder', 'text-slate-600', 'dark:text-slate-300');
+      });
+      event.target.classList.add('bg-brand-600', 'text-white', 'border-brand-600');
+      
+      const query = document.getElementById('badgeSearchInput').value;
+      renderBadges(activeCategory, query);
+    }
+
+    function searchBadges() {
+      const query = document.getElementById('badgeSearchInput').value;
+      renderBadges(activeCategory, query);
+    }
+
+    function renderNotes() {
+      const list = document.getElementById('notesList');
+      list.innerHTML = notesData.map(n => `
+        <div class="py-3 first:pt-0 last:pb-0">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200">${n.title}</h4>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-brand-600 dark:text-brand-400">${n.tag}</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${n.snippet}</p>
+        </div>
+      `).join('');
+    }
+
+    function openModal(projectId) {
+      const project = projectsData.find(p => p.id === projectId);
+      if(!project) return;
+
+      const modalContent = document.getElementById('modalContent');
+      modalContent.innerHTML = `
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+              <i data-lucide="${project.icon}" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">${project.category}</span>
+              <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">${project.title}</h3>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="bg-slate-50 dark:bg-darkbg p-4 rounded-xl border border-slate-200 dark:border-darkborder">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-2">
+                <i data-lucide="info" class="w-4 h-4 text-brand-500"></i> What It Does
+              </h4>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed">${project.what}</p>
+            </div>
+
+            <div class="bg-emerald-50/50 dark:bg-emerald-950/20 p-4 rounded-xl border border-emerald-200 dark:border-emerald-800/40">
+              <h4 class="font-bold text-emerald-900 dark:text-emerald-300 mb-1 flex items-center gap-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-500"></i> Why It Matters & Business Impact
+              </h4>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-3">${project.why}</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-400 font-mono text-xs">
+                ${project.impact.map(i => `<li>${i}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-200 dark:border-darkborder flex flex-col sm:flex-row gap-3">
+            <a href="${project.demoUrl}" target="_blank" class="flex-1 py-2.5 px-4 rounded-lg bg-brand-600 text-white font-semibold text-xs text-center hover:bg-brand-700 transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="github" class="w-4 h-4"></i> View Repository
+            </a>
+            <button onclick="closeModal()" class="py-2.5 px-4 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs text-center">
+              Close
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('projectModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('projectModal').classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      renderProjects();
+      renderTrophies();
+      renderBadges();
+      renderNotes();
+    });
+  </script>
+</body>
+</html>
