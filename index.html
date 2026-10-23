@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,21 +35,27 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
     body {
       font-family: 'Inter', sans-serif;
     }
+
     .font-mono {
       font-family: 'JetBrains+Mono', monospace;
     }
   </style>
 </head>
-<body class="bg-slate-50 dark:bg-darkbg text-slate-800 dark:text-slate-200 transition-colors duration-200 min-h-screen flex flex-col">
+
+<body
+  class="bg-slate-50 dark:bg-darkbg text-slate-800 dark:text-slate-200 transition-colors duration-200 min-h-screen flex flex-col">
 
   <!-- TOP NAVIGATION HEADER -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-darkbg/80 border-b border-slate-200 dark:border-darkborder">
+  <header
+    class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-darkbg/80 border-b border-slate-200 dark:border-darkborder">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-mono font-bold text-sm shadow-sm">
+        <div
+          class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-mono font-bold text-sm shadow-sm">
           CO
         </div>
         <div>
@@ -61,12 +68,15 @@
       <div class="flex items-center space-x-4">
         <nav class="hidden md:flex space-x-6 text-xs font-mono">
           <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
-          <a href="#powershell-evolution" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Automation Origins</a>
+          <a href="#powershell-evolution"
+            class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Automation Origins</a>
           <a href="#notes" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Notebook</a>
-          <a href="#credentials" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Credentials</a>
+          <a href="#credentials"
+            class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Credentials</a>
         </nav>
 
-        <button onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-100 dark:bg-darkcard border border-slate-200 dark:border-darkborder text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-all">
+        <button onclick="toggleTheme()"
+          class="p-2 rounded-lg bg-slate-100 dark:bg-darkcard border border-slate-200 dark:border-darkborder text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-all">
           <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
           <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
         </button>
@@ -79,7 +89,8 @@
 
     <!-- HERO / PROFILE SUMMARY -->
     <section class="space-y-4">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400 text-xs font-mono font-medium">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400 text-xs font-mono font-medium">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
         Systems & Automation Architect
       </div>
@@ -89,14 +100,18 @@
       </h1>
 
       <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
-        Started in enterprise PowerShell automation and evolved into modern containerized architectures, microservices API orchestration, and LLM agent pipelines. Focused on delivering high-impact business outcomes through scalable systems design.
+        Started in enterprise PowerShell automation and evolved into modern containerized architectures, microservices
+        API orchestration, and LLM agent pipelines. Focused on delivering high-impact business outcomes through scalable
+        systems design.
       </p>
 
       <div class="flex flex-wrap gap-3 pt-2">
-        <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-sm transition-all">
+        <a href="#projects"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-sm transition-all">
           <i data-lucide="cpu" class="w-4 h-4"></i> View Practical Projects
         </a>
-        <a href="https://github.com" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-200 dark:bg-darkcard hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white text-xs font-semibold border border-slate-300 dark:border-darkborder transition-all">
+        <a href="https://github.com" target="_blank"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-200 dark:bg-darkcard hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white text-xs font-semibold border border-slate-300 dark:border-darkborder transition-all">
           <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
         </a>
       </div>
@@ -127,17 +142,24 @@
           Automation Origins: PowerShell & API Wrappers
         </h2>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          How enterprise PowerShell scripting laid the groundwork for modern asynchronous REST API orchestration and containerized services.
+          How enterprise PowerShell scripting laid the groundwork for modern asynchronous REST API orchestration and
+          containerized services.
         </p>
       </div>
 
-      <div class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-6 shadow-sm space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-darkborder pb-4">
+      <div
+        class="bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder rounded-xl p-6 shadow-sm space-y-4">
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-darkborder pb-4">
           <div>
-            <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400">Architectural Perspective</span>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">The Bridge from PowerShell Modules to Native REST APIs</h3>
+            <span class="text-xs font-mono uppercase font-bold text-brand-600 dark:text-brand-400">Architectural
+              Perspective</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">The Bridge from PowerShell Modules to
+              Native REST APIs</h3>
           </div>
-          <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-mono self-start sm:self-auto">Enterprise Systems</span>
+          <span
+            class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-mono self-start sm:self-auto">Enterprise
+            Systems</span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
@@ -147,7 +169,13 @@
               What it was:
             </h4>
             <p>
-              PowerShell was the backbone of Microsoft enterprise automation. Managing Exchange Online, Azure AD, or Active Directory meant invoking cmdlets like <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-[11px] font-mono text-brand-600 dark:text-brand-400">Get-MgUser</code> or <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-[11px] font-mono text-brand-600 dark:text-brand-400">Set-AzResource</code>. Under the hood, these cmdlets were structured abstractions wrapping raw HTTP/REST API calls (e.g., Microsoft Graph API).
+              PowerShell was the backbone of Microsoft enterprise automation. Managing Exchange Online, Azure AD, or
+              Active Directory meant invoking cmdlets like <code
+                class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-[11px] font-mono text-brand-600 dark:text-brand-400">Get-MgUser</code>
+              or <code
+                class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-[11px] font-mono text-brand-600 dark:text-brand-400">Set-AzResource</code>.
+              Under the hood, these cmdlets were structured abstractions wrapping raw HTTP/REST API calls (e.g.,
+              Microsoft Graph API).
             </p>
           </div>
 
@@ -157,16 +185,23 @@
               Why it evolved:
             </h4>
             <p>
-              While PowerShell scripts are ideal for administrator task execution, modern event-driven AI agents demand lightweight, stateless, async microservices. Understanding that Microsoft modules are REST wrappers enabled a seamless transition directly to native API integrations, webhooks, Docker containers, and n8n orchestration pipelines.
+              While PowerShell scripts are ideal for administrator task execution, modern event-driven AI agents demand
+              lightweight, stateless, async microservices. Understanding that Microsoft modules are REST wrappers
+              enabled a seamless transition directly to native API integrations, webhooks, Docker containers, and n8n
+              orchestration pipelines.
             </p>
           </div>
         </div>
 
         <div class="pt-2 flex flex-wrap gap-2 font-mono text-[11px]">
-          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PowerShell 7+</span>
-          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Microsoft Graph REST API</span>
-          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Azure CLI</span>
-          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">OAuth2 JWT Authentication</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PowerShell
+            7+</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Microsoft
+            Graph REST API</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Azure
+            CLI</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">OAuth2 JWT
+            Authentication</span>
         </div>
       </div>
     </section>
@@ -179,7 +214,8 @@
           Architecture Notebook & Insights
         </h2>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Technical insights on transitioning legacy automation to containerized AI orchestration and vector-backed state management.
+          Technical insights on transitioning legacy automation to containerized AI orchestration and vector-backed
+          state management.
         </p>
       </div>
 
@@ -201,7 +237,8 @@
           </p>
         </div>
 
-        <a href="https://learn.microsoft.com" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-semibold transition-all shrink-0">
+        <a href="https://learn.microsoft.com" target="_blank"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-semibold transition-all shrink-0">
           <i data-lucide="external-link" class="w-4 h-4"></i>
           Verify Full Microsoft Transcript
         </a>
@@ -223,7 +260,8 @@
 
       <!-- MICROSOFT LEARNING TROPHIES SECTION -->
       <div class="space-y-3 pt-4">
-        <h3 class="text-xs font-mono uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider flex items-center gap-2">
+        <h3
+          class="text-xs font-mono uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider flex items-center gap-2">
           <i data-lucide="trophy" class="w-4 h-4 text-amber-500"></i>
           Microsoft Learn Achievements & Trophies
         </h3>
@@ -241,7 +279,8 @@
 
           <div class="flex items-center space-x-2">
             <div class="relative flex-1 sm:w-64">
-              <input type="text" id="badgeSearchInput" onkeyup="searchBadges()" placeholder="Search achievements..." class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder text-xs focus:outline-none focus:border-brand-500 text-slate-800 dark:text-slate-200">
+              <input type="text" id="badgeSearchInput" onkeyup="searchBadges()" placeholder="Search achievements..."
+                class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-white dark:bg-darkcard border border-slate-200 dark:border-darkborder text-xs focus:outline-none focus:border-brand-500 text-slate-800 dark:text-slate-200">
               <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400"></i>
             </div>
           </div>
@@ -255,7 +294,8 @@
 
   </main>
 
-  <footer class="border-t border-slate-200 dark:border-darkborder py-6 text-center text-xs text-slate-500 dark:text-slate-400 font-mono">
+  <footer
+    class="border-t border-slate-200 dark:border-darkborder py-6 text-center text-xs text-slate-500 dark:text-slate-400 font-mono">
     <div class="max-w-6xl mx-auto px-4">
       Clint Oliveira &bull; AI Infrastructure & Automation Portfolio
     </div>
@@ -530,4 +570,5 @@
     });
   </script>
 </body>
+
 </html>
